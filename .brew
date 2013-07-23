@@ -67,8 +67,8 @@ installcask macvim
 installcask miro-video-converter
 installcask sublime-text
 installcask the-unarchiver
-installcask tor-browser
-installcask transmission
+#installcask tor-browser
+#installcask transmission
 installcask ukelele
 installcask virtualbox
 installcask vlc

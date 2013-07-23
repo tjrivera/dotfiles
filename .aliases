@@ -19,6 +19,14 @@ alias m="mate ."
 alias s="subl ."
 alias o="open"
 alias oo="open ."
+alias zshconfig="sublime ~/.zshrc"
+alias ohmyzsh="sublime ~/.oh-my-zsh"
+alias slate="sublime ~/.slate"
+alias psql="/Applications/Postgres.app/Contents/MacOS/bin/psql"
+alias ssh_dev="ssh riverat2@rescows02.research.chop.edu"
+alias ssh_prod="ssh resrhcbhd01.research.chop.edu"
+alias clear_cache="echo 'flush_all' | nc localhost 11211"
+alias scala="scala -cp \"/Users/riverat2/lib/*\""
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
