@@ -73,6 +73,7 @@ export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
 source /usr/local/bin/virtualenvwrapper.sh
 export GOPATH=$HOME/go
+export GPGKEY=$HOME/.gpg
 export PATH=/usr/local/bin:/usr/bin:/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
