@@ -7,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="mrtazz"
 
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.{exports,aliases,functions,extra,chop}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
