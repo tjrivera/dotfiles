@@ -25,6 +25,9 @@ brew install homebrew/dupes/grep
 #brew install homebrew/dupes/vim
 #brew install homebrew/dupes/screen
 
+#Install tmux terminal support
+brew install tmux
+
 # Install other useful binaries
 brew install ack
 brew install git
