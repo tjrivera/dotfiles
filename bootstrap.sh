@@ -6,6 +6,9 @@ function doIt() {
 		--exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~
 	source ~/.zshrc
 }
+if [ ! -d "~/.oh-my-zsh/"]; then
+    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+fi
 if [[ "$1" == "--force" || "$1" == "-f" ]]; then
     doIt
 else

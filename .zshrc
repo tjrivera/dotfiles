@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="mrtazz"
+ZSH_THEME="tjrivera"
 
 for file in ~/.{exports,aliases,functions,extra,chop}; do
     [ -r "$file" ] && source "$file"
@@ -68,12 +68,17 @@ SQLPATH="$ORACLE_HOME"
 export SQLPATH
 export CLASSPATH=$HOME/lib
 export PATH="$PATH:$ORACLEH_HOME"
-
+# Scala stuff
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
+# Python stuff
 export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
 source /usr/local/bin/virtualenvwrapper.sh
+# Go stuff
 export GOPATH=$HOME/go
+# Crypto Stuff
 export GPGKEY=$HOME/.gpg
+
 export PATH=/usr/local/bin:/usr/bin:/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
