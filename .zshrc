@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="tjrivera"
+ZSH_THEME="zemm-blinks"
 
 for file in ~/.{exports,aliases,functions,extra,chop}; do
     [ -r "$file" ] && source "$file"
@@ -75,7 +75,7 @@ export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
 source /usr/local/bin/virtualenvwrapper.sh
 # Go stuff
-export GOPATH=$HOME/go
+export GOPATH=/Users/tyler/Projects
 # Crypto Stuff
 export GPGKEY=$HOME/.gpg
 
