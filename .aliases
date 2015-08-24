@@ -27,6 +27,8 @@ alias ssh_dev="ssh riverat2@rescows02.research.chop.edu"
 alias ssh_prod="ssh resrhcbhd01.research.chop.edu"
 alias clear_cache="echo 'flush_all' | nc localhost 11211"
 alias scala="scala -cp \"/Users/riverat2/lib/*\""
+alias dm="docker-machine"
+
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
