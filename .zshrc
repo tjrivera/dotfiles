@@ -1,25 +1,15 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="zemm-blinks"
+ZSH_THEME="af-magic"
 
-for file in ~/.{exports,aliases,functions,extra,chop}; do
+for file in ~/.{exports,aliases,functions,extra}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
-
-cbmi_clone() {
-    git clone git@github.research.chop.edu:cbmi/"$1".git
-}
-server(){
-    local port="${1:-8000}"
-    open "http://localhost:${port}/"
-    python -m SimpleHTTPServer "$port"
-}
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -50,35 +40,29 @@ server(){
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git scala sublime supervisor vagrant web-search)
+plugins=(git scala sublime supervisor vagrant web-search zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
 ## Path Stuff
 
-# Oracle Nonsense
-
-ORACLE_HOME="/oracle/product/11.2.0/instantclient"
-export ORACLE_HOME
-
-DYLD_LIBRARY_PATH="$ORACLE_HOME"
-export DYLD_LIBRARY_PATH
-
-SQLPATH="$ORACLE_HOME"
-export SQLPATH
-export CLASSPATH=$HOME/lib
-export PATH="$PATH:$ORACLEH_HOME"
-# Scala stuff
-export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
 # Python stuff
 export WORKON_HOME=~/.virtualenvs
-export PROJECT_HOME=$HOME/Projects
+export PROJECT_HOME=$HOME/code
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
 # Go stuff
-export GOPATH=/Users/tyler/Projects
+export GOPATH=$HOME/code/go
 # Crypto Stuff
-export GPGKEY=$HOME/.gpg
 
-export PATH=/usr/local/bin:/usr/bin:/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+export PATH=$GOPATH/bin:/usr/local/bin:/usr/bin:/Applications/Postgres.app/Contents/MacOS/bin:/Users/tylerrivera/Library/Android/sdk/platform-tools:$PATH
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(direnv hook zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
